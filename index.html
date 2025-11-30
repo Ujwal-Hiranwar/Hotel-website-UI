@@ -1,19 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hotel website</title>
-   
+
     <script src="https://cdn.tailwindcss.com"></script>
-  
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
-    
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-   
+
     <script>
         tailwind.config = {
             theme: {
@@ -32,65 +35,69 @@
         }
     </script>
     <style>
-        
         @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
         }
-        
+
         .animate-fade-in {
             animation: fadeIn 1s ease-out forwards;
         }
-        
+
 
         .hero-bg {
             background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80');
             background-size: cover;
             background-position: center;
         }
-        
-       
+
+
         .nav-scrolled {
             background-color: rgba(255, 255, 255, 0.95);
             transition: all 0.3s ease;
         }
-        
-       
+
+
         .menu-item {
             transition: all 0.3s ease;
         }
-        
+
         .menu-item:hover {
             transform: translateY(-5px);
             box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
         }
-        
-       
+
+
         .gallery-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
             grid-gap: 16px;
         }
-        
+
         .gallery-item {
             position: relative;
             overflow: hidden;
             border-radius: 8px;
             transition: all 0.3s ease;
         }
-        
+
         .gallery-item img {
             transition: transform 0.5s ease;
         }
-        
+
         .gallery-item:hover img {
             transform: scale(1.1);
         }
-        
+
         .gallery-item:hover .gallery-overlay {
             opacity: 1;
         }
-        
+
         .gallery-overlay {
             position: absolute;
             top: 0;
@@ -106,8 +113,9 @@
         }
     </style>
 </head>
-<body class="font-sans text-gray-800 bg-secondary min-h-screen">
-  
+
+<body class="font-sans text-gray-800 bg-secondary min-h-screen ">
+
     <nav id="navbar" class="fixed w-full z-10 transition-all duration-300">
         <div class="container mx-auto px-4 py-3">
             <div class="flex justify-between items-center">
@@ -115,64 +123,81 @@
                 <div class="hidden md:flex space-x-8">
                     <a href="#home" class="hover:text-primary transition-colors duration-300 relative group">
                         Home
-                        <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
+                        <span
+                            class="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
                     </a>
                     <a href="#about" class="hover:text-primary transition-colors duration-300 relative group">
                         About
-                        <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
+                        <span
+                            class="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
                     </a>
                     <a href="#menu" class="hover:text-primary transition-colors duration-300 relative group">
                         Menu
-                        <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
+                        <span
+                            class="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
                     </a>
                     <a href="#gallery" class="hover:text-primary transition-colors duration-300 relative group">
                         Gallery
-                        <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
+                        <span
+                            class="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
                     </a>
                     <a href="#testimonials" class="hover:text-primary transition-colors duration-300 relative group">
                         Testimonials
-                        <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
+                        <span
+                            class="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
                     </a>
                     <a href="#contact" class="hover:text-primary transition-colors duration-300 relative group">
                         Contact
-                        <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
+                        <span
+                            class="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
                     </a>
                 </div>
                 <div class="md:hidden mr-20">
                     <button id="menu-toggle" class="focus:outline-none">
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16"></path>
                         </svg>
                     </button>
                 </div>
             </div>
-           
+
             <div id="mobile-menu" class="md:hidden hidden">
                 <div class="flex flex-col space-y-4 py-4 bg-white mt-2 rounded-lg shadow-lg">
                     <a href="#home" class="hover:text-primary transition-colors px-4 py-2 hover:bg-gray-100">Home</a>
                     <a href="#about" class="hover:text-primary transition-colors px-4 py-2 hover:bg-gray-100">About</a>
                     <a href="#menu" class="hover:text-primary transition-colors px-4 py-2 hover:bg-gray-100">Menu</a>
-                    <a href="#gallery" class="hover:text-primary transition-colors px-4 py-2 hover:bg-gray-100">Gallery</a>
-                    <a href="#testimonials" class="hover:text-primary transition-colors px-4 py-2 hover:bg-gray-100">Testimonials</a>
-                    <a href="#contact" class="hover:text-primary transition-colors px-4 py-2 hover:bg-gray-100">Contact</a>
+                    <a href="#gallery"
+                        class="hover:text-primary transition-colors px-4 py-2 hover:bg-gray-100">Gallery</a>
+                    <a href="#testimonials"
+                        class="hover:text-primary transition-colors px-4 py-2 hover:bg-gray-100">Testimonials</a>
+                    <a href="#contact"
+                        class="hover:text-primary transition-colors px-4 py-2 hover:bg-gray-100">Contact</a>
                 </div>
             </div>
         </div>
     </nav>
 
-  
+
     <section id="home" class="hero-bg h-screen flex items-center justify-center text-white">
         <div class="text-center px-4">
-            <h1 class="text-4xl md:text-6xl font-serif font-bold mb-4 opacity-0 animate-fade-in" style="animation-delay: 0.3s;">Exquisite Dining Experience</h1>
-            <p class="text-xl md:text-2xl mb-8 opacity-0 animate-fade-in" style="animation-delay: 0.6s;">Savor the taste of tradition with a modern twist</p>
+            <h1 class="text-4xl md:text-6xl font-serif font-bold mb-4 opacity-0 animate-fade-in"
+                style="animation-delay: 0.3s;">Exquisite Dining Experience</h1>
+            <p class="text-xl md:text-2xl mb-8 opacity-0 animate-fade-in" style="animation-delay: 0.6s;">Savor the taste
+                of tradition with a modern twist</p>
             <div class="space-x-4 opacity-0 animate-fade-in" style="animation-delay: 0.9s;">
-                <a href="#menu" class="bg-primary hover:bg-opacity-90 text-white px-6 py-3 rounded-lg transition-all duration-300 hover:shadow-lg transform hover:-translate-y-1">View Menu</a>
-                <a href="#contact" class="bg-transparent border-2 border-white hover:bg-white hover:text-primary px-6 py-3 rounded-lg transition-all duration-300 hover:shadow-lg transform hover:-translate-y-1">Reserve a Table</a>
+                <a href="#menu"
+                    class="bg-primary hover:bg-opacity-90 text-white px-6 py-3 rounded-lg transition-all duration-300 hover:shadow-lg transform hover:-translate-y-1">View
+                    Menu</a>
+                <a href="#contact"
+                    class="bg-transparent border-2 border-white hover:bg-white hover:text-primary px-6 py-3 rounded-lg transition-all duration-300 hover:shadow-lg transform hover:-translate-y-1">Reserve
+                    a Table</a>
             </div>
         </div>
     </section>
 
-   
+
     <section id="about" class="py-20 bg-white">
         <div class="container mx-auto px-4">
             <div class="text-center mb-12" data-aos="fade-up">
@@ -181,12 +206,17 @@
             </div>
             <div class="flex flex-col md:flex-row items-center">
                 <div class="md:w-1/2 mb-8 md:mb-0" data-aos="fade-right" data-aos-delay="100">
-                    <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Restaurant interior" class="rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-500">
+                    <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+                        alt="Restaurant interior"
+                        class="rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-500">
                 </div>
                 <div class="md:w-1/2 md:pl-12" data-aos="fade-left" data-aos-delay="200">
                     <h3 class="text-2xl font-serif font-bold mb-4">A Culinary Journey Since 1995</h3>
-                    <p class="mb-4">Strategem was founded with a simple yet profound mission: to create memorable dining experiences through exceptional food, impeccable service, and a warm atmosphere.</p>
-                    <p class="mb-6">Our chef brings over 20 years of culinary expertise, crafting dishes that blend traditional techniques with innovative flavors. We source only the freshest, locally-grown ingredients to ensure every plate tells a story of quality and passion.</p>
+                    <p class="mb-4">Strategem was founded with a simple yet profound mission: to create memorable dining
+                        experiences through exceptional food, impeccable service, and a warm atmosphere.</p>
+                    <p class="mb-6">Our chef brings over 20 years of culinary expertise, crafting dishes that blend
+                        traditional techniques with innovative flavors. We source only the freshest, locally-grown
+                        ingredients to ensure every plate tells a story of quality and passion.</p>
                     <div class="flex space-x-4">
                         <div class="text-center" data-aos="zoom-in" data-aos-delay="300">
                             <div class="text-3xl font-bold text-primary">25+</div>
@@ -206,7 +236,7 @@
         </div>
     </section>
 
-   
+
     <section id="menu" class="py-20 bg-secondary">
         <div class="container mx-auto px-4">
             <div class="text-center mb-12" data-aos="fade-up">
@@ -215,47 +245,56 @@
                 <p class="mt-4 text-gray-600">Explore our chef's selection of signature dishes</p>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                
-                <div class="menu-item bg-white rounded-lg shadow-lg overflow-hidden" data-aos="fade-up" data-aos-delay="100">
-                    <img src="https://images.unsplash.com/photo-1544025162-d76694265947?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1469&q=80" alt="Grilled Salmon" class="w-full h-48 object-cover">
+
+                <div class="menu-item bg-white rounded-lg shadow-lg overflow-hidden" data-aos="fade-up"
+                    data-aos-delay="100">
+                    <img src="https://images.unsplash.com/photo-1544025162-d76694265947?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1469&q=80"
+                        alt="Grilled Salmon" class="w-full h-48 object-cover">
                     <div class="p-6">
                         <div class="flex justify-between items-center mb-4">
                             <h3 class="text-xl font-serif font-bold">Grilled Salmon</h3>
                             <span class="text-accent font-bold">$24.95</span>
                         </div>
-                        <p class="text-gray-600 mb-4">Fresh Atlantic salmon, grilled to perfection, served with roasted vegetables and lemon herb sauce.</p>
+                        <p class="text-gray-600 mb-4">Fresh Atlantic salmon, grilled to perfection, served with roasted
+                            vegetables and lemon herb sauce.</p>
                         <div class="flex items-center text-sm text-gray-500">
                             <span class="mr-2">⭐⭐⭐⭐⭐</span>
                             <span>Chef's Favorite</span>
                         </div>
                     </div>
                 </div>
-                
-                
-                <div class="menu-item bg-white rounded-lg shadow-lg overflow-hidden" data-aos="fade-up" data-aos-delay="200">
-                    <img src="https://images.unsplash.com/photo-1603048297172-c92544798d5a?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Beef Tenderloin" class="w-full h-48 object-cover">
+
+
+                <div class="menu-item bg-white rounded-lg shadow-lg overflow-hidden" data-aos="fade-up"
+                    data-aos-delay="200">
+                    <img src="https://images.unsplash.com/photo-1603048297172-c92544798d5a?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                        alt="Beef Tenderloin" class="w-full h-48 object-cover">
                     <div class="p-6">
                         <div class="flex justify-between items-center mb-4">
                             <h3 class="text-xl font-serif font-bold">Beef Tenderloin</h3>
                             <span class="text-accent font-bold">$32.95</span>
                         </div>
-                        <p class="text-gray-600 mb-4">Prime beef tenderloin, cooked to your preference, with truffle mashed potatoes and red wine reduction.</p>
+                        <p class="text-gray-600 mb-4">Prime beef tenderloin, cooked to your preference, with truffle
+                            mashed potatoes and red wine reduction.</p>
                         <div class="flex items-center text-sm text-gray-500">
                             <span class="mr-2">⭐⭐⭐⭐⭐</span>
                             <span>Most Popular</span>
                         </div>
                     </div>
                 </div>
-                
-               
-                <div class="menu-item bg-white rounded-lg shadow-lg overflow-hidden" data-aos="fade-up" data-aos-delay="300">
-                    <img src="https://images.unsplash.com/photo-1551183053-bf91a1d81141?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1632&q=80" alt="Mushroom Risotto" class="w-full h-48 object-cover">
+
+
+                <div class="menu-item bg-white rounded-lg shadow-lg overflow-hidden" data-aos="fade-up"
+                    data-aos-delay="300">
+                    <img src="https://images.unsplash.com/photo-1551183053-bf91a1d81141?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1632&q=80"
+                        alt="Mushroom Risotto" class="w-full h-48 object-cover">
                     <div class="p-6">
                         <div class="flex justify-between items-center mb-4">
                             <h3 class="text-xl font-serif font-bold">Mushroom Risotto</h3>
                             <span class="text-accent font-bold">$19.95</span>
                         </div>
-                        <p class="text-gray-600 mb-4">Creamy Arborio rice with wild mushrooms, white wine, and Parmesan cheese, finished with truffle oil.</p>
+                        <p class="text-gray-600 mb-4">Creamy Arborio rice with wild mushrooms, white wine, and Parmesan
+                            cheese, finished with truffle oil.</p>
                         <div class="flex items-center text-sm text-gray-500">
                             <span class="mr-2">⭐⭐⭐⭐⭐</span>
                             <span>Vegetarian</span>
@@ -264,12 +303,14 @@
                 </div>
             </div>
             <div class="text-center mt-12" data-aos="fade-up">
-                <a href="#" class="inline-block bg-primary hover:bg-opacity-90 text-white px-6 py-3 rounded-lg transition-all duration-300 hover:shadow-lg transform hover:-translate-y-1">View Full Menu</a>
+                <a href="#"
+                    class="inline-block bg-primary hover:bg-opacity-90 text-white px-6 py-3 rounded-lg transition-all duration-300 hover:shadow-lg transform hover:-translate-y-1">View
+                    Full Menu</a>
             </div>
         </div>
     </section>
 
-    
+
     <section id="gallery" class="py-20 bg-white">
         <div class="container mx-auto px-4">
             <div class="text-center mb-12" data-aos="fade-up">
@@ -277,82 +318,98 @@
                 <div class="w-24 h-1 bg-accent mx-auto mt-4"></div>
                 <p class="mt-4 text-gray-600">A visual feast of our culinary creations</p>
             </div>
-            
+
             <div class="gallery-grid" data-aos="fade-up">
-            
+
                 <div class="gallery-item" data-aos="zoom-in" data-aos-delay="100">
-                    <a href="https://images.unsplash.com/photo-1504674900247-0877df9cc836?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" data-lightbox="food-gallery" data-title="Signature Steak">
-                        <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Signature Steak" class="w-full h-64 object-cover">
+                    <a href="https://images.unsplash.com/photo-1504674900247-0877df9cc836?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+                        data-lightbox="food-gallery" data-title="Signature Steak">
+                        <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+                            alt="Signature Steak" class="w-full h-64 object-cover">
                         <div class="gallery-overlay">
                             <p class="text-white text-lg font-semibold">Signature Steak</p>
                         </div>
                     </a>
                 </div>
-                
-                
+
+
                 <div class="gallery-item" data-aos="zoom-in" data-aos-delay="200">
-                    <a href="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1014&q=80" data-lightbox="food-gallery" data-title="Gourmet Pizza">
-                        <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1014&q=80" alt="Gourmet Pizza" class="w-full h-64 object-cover">
+                    <a href="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1014&q=80"
+                        data-lightbox="food-gallery" data-title="Gourmet Pizza">
+                        <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1014&q=80"
+                            alt="Gourmet Pizza" class="w-full h-64 object-cover">
                         <div class="gallery-overlay">
                             <p class="text-white text-lg font-semibold">Gourmet Pizza</p>
                         </div>
                     </a>
                 </div>
-                
-               
+
+
                 <div class="gallery-item" data-aos="zoom-in" data-aos-delay="300">
-                    <a href="https://images.unsplash.com/photo-1559339352-11d035aa65de?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80" data-lightbox="food-gallery" data-title="Chef's Special">
-                        <img src="https://images.unsplash.com/photo-1559339352-11d035aa65de?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80" alt="Chef's Special" class="w-full h-64 object-cover">
+                    <a href="https://images.unsplash.com/photo-1559339352-11d035aa65de?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80"
+                        data-lightbox="food-gallery" data-title="Chef's Special">
+                        <img src="https://images.unsplash.com/photo-1559339352-11d035aa65de?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80"
+                            alt="Chef's Special" class="w-full h-64 object-cover">
                         <div class="gallery-overlay">
                             <p class="text-white text-lg font-semibold">Chef's Special</p>
                         </div>
                     </a>
                 </div>
-                
-                
+
+
                 <div class="gallery-item" data-aos="zoom-in" data-aos-delay="400">
-                    <a href="https://images.unsplash.com/photo-1544025162-d76694265947?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1469&q=80" data-lightbox="food-gallery" data-title="Grilled Salmon">
-                        <img src="https://images.unsplash.com/photo-1544025162-d76694265947?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1469&q=80" alt="Grilled Salmon" class="w-full h-64 object-cover">
+                    <a href="https://images.unsplash.com/photo-1544025162-d76694265947?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1469&q=80"
+                        data-lightbox="food-gallery" data-title="Grilled Salmon">
+                        <img src="https://images.unsplash.com/photo-1544025162-d76694265947?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1469&q=80"
+                            alt="Grilled Salmon" class="w-full h-64 object-cover">
                         <div class="gallery-overlay">
                             <p class="text-white text-lg font-semibold">Grilled Salmon</p>
                         </div>
                     </a>
                 </div>
-                
-               
+
+
                 <div class="gallery-item" data-aos="zoom-in" data-aos-delay="500">
-                    <a href="https://images.unsplash.com/photo-1551183053-bf91a1d81141?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1632&q=80" data-lightbox="food-gallery" data-title="Mushroom Risotto">
-                        <img src="https://images.unsplash.com/photo-1551183053-bf91a1d81141?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1632&q=80" alt="Mushroom Risotto" class="w-full h-64 object-cover">
+                    <a href="https://images.unsplash.com/photo-1551183053-bf91a1d81141?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1632&q=80"
+                        data-lightbox="food-gallery" data-title="Mushroom Risotto">
+                        <img src="https://images.unsplash.com/photo-1551183053-bf91a1d81141?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1632&q=80"
+                            alt="Mushroom Risotto" class="w-full h-64 object-cover">
                         <div class="gallery-overlay">
                             <p class="text-white text-lg font-semibold">Mushroom Risotto</p>
                         </div>
                     </a>
                 </div>
-                
-               
+
+
                 <div class="gallery-item" data-aos="zoom-in" data-aos-delay="600">
-                    <a href="https://images.unsplash.com/photo-1546833998-877b37c2e5c4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" data-lightbox="food-gallery" data-title="Beef Tenderloin">
-                        <img src="https://images.unsplash.com/photo-1603048297172-c92544798d5a?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Beef Tenderloin" class="w-full h-64 object-cover">
+                    <a href="https://images.unsplash.com/photo-1546833998-877b37c2e5c4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+                        data-lightbox="food-gallery" data-title="Beef Tenderloin">
+                        <img src="https://images.unsplash.com/photo-1603048297172-c92544798d5a?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                            alt="Beef Tenderloin" class="w-full h-64 object-cover">
                         <div class="gallery-overlay">
                             <p class="text-white text-lg font-semibold">Beef Tenderloin</p>
                         </div>
                     </a>
                 </div>
-                
-             
+
+
                 <div class="gallery-item" data-aos="zoom-in" data-aos-delay="700">
-                    <a href="https://images.unsplash.com/photo-1473093295043-cdd812d0e601?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" data-lightbox="food-gallery" data-title="Fresh Pasta">
-                        <img src="https://images.unsplash.com/photo-1473093295043-cdd812d0e601?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Fresh Pasta" class="w-full h-64 object-cover">
+                    <a href="https://images.unsplash.com/photo-1473093295043-cdd812d0e601?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+                        data-lightbox="food-gallery" data-title="Fresh Pasta">
+                        <img src="https://images.unsplash.com/photo-1473093295043-cdd812d0e601?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+                            alt="Fresh Pasta" class="w-full h-64 object-cover">
                         <div class="gallery-overlay">
-                           <p class="text-white text-lg font-semibold">Fresh Pasta</p>
+                            <p class="text-white text-lg font-semibold">Fresh Pasta</p>
                         </div>
                     </a>
                 </div>
-                
-                
+
+
                 <div class="gallery-item" data-aos="zoom-in" data-aos-delay="800">
-                    <a href="https://images.unsplash.com/photo-1514326640560-7d063ef2aed5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" data-lightbox="food-gallery" data-title="Dessert Platter">
-                        <img src="https://images.unsplash.com/photo-1514326640560-7d063ef2aed5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Dessert Platter" class="w-full h-64 object-cover">
+                    <a href="https://images.unsplash.com/photo-1514326640560-7d063ef2aed5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+                        data-lightbox="food-gallery" data-title="Dessert Platter">
+                        <img src="https://images.unsplash.com/photo-1514326640560-7d063ef2aed5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+                            alt="Dessert Platter" class="w-full h-64 object-cover">
                         <div class="gallery-overlay">
                             <p class="text-white text-lg font-semibold">Dessert Platter</p>
                         </div>
@@ -362,7 +419,7 @@
         </div>
     </section>
 
-   
+
     <section id="testimonials" class="py-20 bg-secondary">
         <div class="container mx-auto px-4">
             <div class="text-center mb-12" data-aos="fade-up">
@@ -370,13 +427,16 @@
                 <div class="w-24 h-1 bg-accent mx-auto mt-4"></div>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
- 
-                <div class="bg-white p-6 rounded-lg shadow-md transform hover:shadow-xl transition-all duration-300" data-aos="fade-up" data-aos-delay="100">
+
+                <div class="bg-white p-6 rounded-lg shadow-md transform hover:shadow-xl transition-all duration-300"
+                    data-aos="fade-up" data-aos-delay="100">
                     <div class="text-accent text-2xl mb-4">"</div>
-                    <p class="mb-4">The food was absolutely exquisite! Every bite was a new adventure of flavors. The service was impeccable, and the ambiance was perfect for our anniversary dinner.</p>
+                    <p class="mb-4">The food was absolutely exquisite! Every bite was a new adventure of flavors. The
+                        service was impeccable, and the ambiance was perfect for our anniversary dinner.</p>
                     <div class="flex items-center">
                         <div class="w-12 h-12 rounded-full bg-gray-300 mr-4 overflow-hidden">
-                            <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Sarah Johnson" class="w-full h-full object-cover">
+                            <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Sarah Johnson"
+                                class="w-full h-full object-cover">
                         </div>
                         <div>
                             <div class="font-bold">Sarah Johnson</div>
@@ -384,14 +444,17 @@
                         </div>
                     </div>
                 </div>
-                
- 
-                <div class="bg-white p-6 rounded-lg shadow-md transform hover:shadow-xl transition-all duration-300" data-aos="fade-up" data-aos-delay="200">
+
+
+                <div class="bg-white p-6 rounded-lg shadow-md transform hover:shadow-xl transition-all duration-300"
+                    data-aos="fade-up" data-aos-delay="200">
                     <div class="text-accent text-2xl mb-4">"</div>
-                    <p class="mb-4">As a food critic, I've dined at many restaurants, but Strategem stands out. Their attention to detail, from presentation to taste, is remarkable. A true culinary gem!</p>
+                    <p class="mb-4">As a food critic, I've dined at many restaurants, but Strategem stands out. Their
+                        attention to detail, from presentation to taste, is remarkable. A true culinary gem!</p>
                     <div class="flex items-center">
                         <div class="w-12 h-12 rounded-full bg-gray-300 mr-4 overflow-hidden">
-                            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Michael Rodriguez" class="w-full h-full object-cover">
+                            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Michael Rodriguez"
+                                class="w-full h-full object-cover">
                         </div>
                         <div>
                             <div class="font-bold">Michael Rodriguez</div>
@@ -399,14 +462,17 @@
                         </div>
                     </div>
                 </div>
-                
- 
-                <div class="bg-white p-6 rounded-lg shadow-md transform hover:shadow-xl transition-all duration-300" data-aos="fade-up" data-aos-delay="300">
+
+
+                <div class="bg-white p-6 rounded-lg shadow-md transform hover:shadow-xl transition-all duration-300"
+                    data-aos="fade-up" data-aos-delay="300">
                     <div class="text-accent text-2xl mb-4">"</div>
-                    <p class="mb-4">I hosted a business dinner here and was thoroughly impressed. The private dining room was elegant, the menu diverse, and the staff accommodated all our special requests.</p>
+                    <p class="mb-4">I hosted a business dinner here and was thoroughly impressed. The private dining
+                        room was elegant, the menu diverse, and the staff accommodated all our special requests.</p>
                     <div class="flex items-center">
                         <div class="w-12 h-12 rounded-full bg-gray-300 mr-4 overflow-hidden">
-                            <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Emily Chen" class="w-full h-full object-cover">
+                            <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Emily Chen"
+                                class="w-full h-full object-cover">
                         </div>
                         <div>
                             <div class="font-bold">Emily Chen</div>
@@ -418,7 +484,7 @@
         </div>
     </section>
 
- 
+
     <section id="contact" class="py-20 bg-primary text-white">
         <div class="container mx-auto px-4">
             <div class="text-center mb-12" data-aos="fade-up">
@@ -432,26 +498,36 @@
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                             <div>
                                 <label for="name" class="block mb-2">Full Name</label>
-                                <input type="text" id="name" class="w-full px-4 py-2 rounded-lg text-gray-800 focus:ring-2 focus:ring-accent focus:outline-none transition-all" required>
+                                <input type="text" id="name"
+                                    class="w-full px-4 py-2 rounded-lg text-gray-800 focus:ring-2 focus:ring-accent focus:outline-none transition-all"
+                                    required>
                             </div>
                             <div>
                                 <label for="email" class="block mb-2">Email Address</label>
-                                <input type="email" id="email" class="w-full px-4 py-2 rounded-lg text-gray-800 focus:ring-2 focus:ring-accent focus:outline-none transition-all" required>
+                                <input type="email" id="email"
+                                    class="w-full px-4 py-2 rounded-lg text-gray-800 focus:ring-2 focus:ring-accent focus:outline-none transition-all"
+                                    required>
                             </div>
                         </div>
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                             <div>
                                 <label for="date" class="block mb-2">Date</label>
-                                <input type="date" id="date" class="w-full px-4 py-2 rounded-lg text-gray-800 focus:ring-2 focus:ring-accent focus:outline-none transition-all" required>
+                                <input type="date" id="date"
+                                    class="w-full px-4 py-2 rounded-lg text-gray-800 focus:ring-2 focus:ring-accent focus:outline-none transition-all"
+                                    required>
                             </div>
                             <div>
                                 <label for="time" class="block mb-2">Time</label>
-                                <input type="time" id="time" class="w-full px-4 py-2 rounded-lg text-gray-800 focus:ring-2 focus:ring-accent focus:outline-none transition-all" required>
+                                <input type="time" id="time"
+                                    class="w-full px-4 py-2 rounded-lg text-gray-800 focus:ring-2 focus:ring-accent focus:outline-none transition-all"
+                                    required>
                             </div>
                         </div>
                         <div>
                             <label for="guests" class="block mb-2">Number of Guests</label>
-                            <select id="guests" class="w-full px-4 py-2 rounded-lg text-gray-800 focus:ring-2 focus:ring-accent focus:outline-none transition-all" required>
+                            <select id="guests"
+                                class="w-full px-4 py-2 rounded-lg text-gray-800 focus:ring-2 focus:ring-accent focus:outline-none transition-all"
+                                required>
                                 <option value="1">1 Person</option>
                                 <option value="2">2 People</option>
                                 <option value="3">3 People</option>
@@ -462,9 +538,12 @@
                         </div>
                         <div>
                             <label for="message" class="block mb-2">Special Requests</label>
-                            <textarea id="message" rows="3" class="w-full px-4 py-2 rounded-lg text-gray-800 focus:ring-2 focus:ring-accent focus:outline-none transition-all"></textarea>
+                            <textarea id="message" rows="3"
+                                class="w-full px-4 py-2 rounded-lg text-gray-800 focus:ring-2 focus:ring-accent focus:outline-none transition-all"></textarea>
                         </div>
-                        <button type="submit" class="bg-accent hover:bg-opacity-90 text-white px-6 py-3 rounded-lg transition-all duration-300 hover:shadow-lg transform hover:-translate-y-1">Reserve Now</button>
+                        <button type="submit"
+                            class="bg-accent hover:bg-opacity-90 text-white px-6 py-3 rounded-lg transition-all duration-300 hover:shadow-lg transform hover:-translate-y-1">Reserve
+                            Now</button>
                     </form>
                 </div>
                 <div class="md:w-1/2 md:pl-8" data-aos="fade-left">
@@ -484,8 +563,11 @@
                     <div>
                         <h3 class="text-2xl font-serif font-bold mb-4">Find Us</h3>
                         <div class="bg-gray-200 h-64 rounded-lg overflow-hidden">
-                            
-                            <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d658.0197578469445!2d78.97288033089303!3d21.09973041148355!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2s!5e0!3m2!1sen!2sin!4v1728577809135!5m2!1sen!2sin" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d658.0197578469445!2d78.97288033089303!3d21.09973041148355!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2s!5e0!3m2!1sen!2sin!4v1728577809135!5m2!1sen!2sin"
+                                width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade"></iframe>
                         </div>
                     </div>
                 </div>
@@ -493,7 +575,7 @@
         </div>
     </section>
 
-  
+
     <footer class="bg-gray-900 text-white py-8">
         <div class="container mx-auto px-4">
             <div class="flex flex-col md:flex-row justify-between items-center">
@@ -504,17 +586,23 @@
                 <div class="flex space-x-6">
                     <a href="#" class="hover:text-accent transition-colors transform hover:scale-110 duration-300">
                         <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"></path>
+                            <path
+                                d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z">
+                            </path>
                         </svg>
                     </a>
                     <a href="#" class="hover:text-accent transition-colors transform hover:scale-110 duration-300">
                         <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"></path>
+                            <path
+                                d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z">
+                            </path>
                         </svg>
                     </a>
                     <a href="#" class="hover:text-accent transition-colors transform hover:scale-110 duration-300">
                         <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723 10.054 10.054 0 01-3.127 1.184 4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"></path>
+                            <path
+                                d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723 10.054 10.054 0 01-3.127 1.184 4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z">
+                            </path>
                         </svg>
                     </a>
                 </div>
@@ -525,8 +613,9 @@
         </div>
     </footer>
 
-   
-    <button id="back-to-top" class="fixed bottom-6 right-6 bg-primary text-white p-3 rounded-full shadow-lg opacity-0 invisible transition-all duration-300 hover:bg-accent">
+
+    <button id="back-to-top"
+        class="fixed bottom-6 right-6 bg-primary text-white p-3 rounded-full shadow-lg opacity-0 invisible transition-all duration-300 hover:bg-accent">
         <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18" />
         </svg>
@@ -534,35 +623,35 @@
 
 
     <script>
-        
-        document.addEventListener('DOMContentLoaded', function() {
+
+        document.addEventListener('DOMContentLoaded', function () {
             AOS.init({
                 duration: 800,
                 easing: 'ease-in-out',
                 once: true
             });
-            
-          
+
+
             const navbar = document.getElementById('navbar');
-            window.addEventListener('scroll', function() {
+            window.addEventListener('scroll', function () {
                 if (window.scrollY > 50) {
                     navbar.classList.add('nav-scrolled');
                 } else {
                     navbar.classList.remove('nav-scrolled');
                 }
             });
-            
+
             // Mobile Menu Toggle
             const menuToggle = document.getElementById('menu-toggle');
             const mobileMenu = document.getElementById('mobile-menu');
-            
+
             menuToggle.addEventListener('click', () => {
                 mobileMenu.classList.toggle('hidden');
             });
-            
+
             // Back to Top Button
             const backToTopButton = document.getElementById('back-to-top');
-            
+
             window.addEventListener('scroll', () => {
                 if (window.scrollY > 300) {
                     backToTopButton.classList.remove('opacity-0', 'invisible');
@@ -572,17 +661,18 @@
                     backToTopButton.classList.remove('opacity-100', 'visible');
                 }
             });
-            
+
             backToTopButton.addEventListener('click', () => {
                 window.scrollTo({
                     top: 0,
                     behavior: 'smooth'
                 });
             });
-            
-            
-           
+
+
+
         });
     </script>
 </body>
+
 </html>
